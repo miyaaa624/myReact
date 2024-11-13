@@ -1,7 +1,127 @@
-h1{
-    font-size: 50px;
+/* 預設邊距為0 */
+* {
+    margin: 0;
+    padding: 0;
 }
-.unLineColor{
-    border-bottom: 3px double blue;
-    text-decoration: dashed;
+
+
+/* banner */
+header img {
+    width: 100%;
+    /* 滿版 */
+}
+
+
+/* 特色 */
+.feature {
+    display: flex;
+    justify-content: space-around;
+    /* 主軸均分 */
+    width: 80%;
+    /* 均分太寬 , 改成80%內容 ; 20%留白 */
+    margin: 50px auto;
+    /* 上下外距50 左右均分(留白均分) */
+}
+
+.feature .box {
+    text-align: center;
+    /* 文字置中 */
+    width: 300px;
+}
+
+.feature h2 {
+    color: red;
+}
+
+.feature p {
+    color: #888;
+    line-height: 1.5;
+    /* 行距 */
+}
+
+
+
+/* 主標 */
+.slogan {
+    background-color: red;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    /* 文字置中 */
+    /* padding: 30px;  建立行高方法1 */
+    line-height: 50px;
+    /* 建立行高方法2 */
+}
+
+
+/* 推薦課程 */
+.course h1 {
+    color: green;
+    text-align: center;
+    line-height: 100px;
+}
+
+.course .courseClass {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: 50px auto;
+
+}
+
+.course .box2 {
+    border: solid rebeccapurple 1px;
+    width: 300px;
+    /* 陰影 :　水平　垂直　擴展度　顏色 */
+    box-shadow: 0px 0px 5px #ccc;
+    padding: 10px;
+}
+
+.course img {
+    width: 100%;
+    /* 等同於上一層絕對單位寬度300px */
+}
+
+.course h3 {
+    font-size: 30px;
+}
+
+.course p {
+    line-height: 2;
+    color: #666;
+}
+
+.course .p-blue {
+    color: rgb(81, 166, 240)
+}
+
+.course .span1 {
+    text-decoration: line-through;
+}
+
+.course .span2 {
+    color: red;
+    font-size: 24px;
+    margin-left: 5px;
+}
+
+.course button {
+    background-color: red;
+    color: #fff;
+    border: none;
+    /* 拿掉邊框 */
+    width: 100%;
+    line-height: 30px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+
+/* footer */
+.footer {
+    background-color: black;
+    color: #fff;
+    line-height: 70px;
+    text-align: center;
+    width: 100%;
 }
