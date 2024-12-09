@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- jQuery主程式 -->
+    <script src="./jquery-3.7.1.min.js"></script>
+
+</head>
+
+<body>
+    <h2>非前端框架下的jQuery使用</h2>
+    <hr>
+    <div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        <p>click1</p>
+        <p>click1</p>
+
+        <hr>
+        <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <button id="hide">隱藏</button>
+        <button id="show">顯示</button>
+    </div>
+
+    <script>
+        $(function () {
+            //程式撰寫區
+            $('p').click(function () {
+                //hide()=>不顯示
+                $(this).hide();
+            });
+        });
+
+        $(function(){
+            $('h2').click(function(){
+                $(this).hide();
+            });
+        })
+    </script>
+
+
+<script>
+    $(function(){
+        $('#hide').click(function(){
+            $('#p1').hide();
+        $('#show').click(function(){
+            $('#p1').show();
+        })
+        });
+    });
+</script>
+</body>
+
+</html>
