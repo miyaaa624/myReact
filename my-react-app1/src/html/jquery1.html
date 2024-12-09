@@ -23,6 +23,7 @@
         <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         <button id="hide">隱藏</button>
         <button id="show">顯示</button>
+        <button id="toggle">雙向</button>
     </div>
 
     <script>
@@ -34,24 +35,152 @@
             });
         });
 
-        $(function(){
-            $('h2').click(function(){
+        $(function () {
+            $('h2').click(function () {
                 $(this).hide();
+            });
+        })
+    </script>
+    <script>
+        $(function () {
+            $('#hide').click(function () {
+                $('#p1').hide(300);
+            });
+            $('#show').click(function () {
+                $('#p1').show(300);
+            });
+            $('#toggle').click(function () {
+                $('#p1').toggle(300);
+            });
+        });
+    </script>
+
+    <hr>
+    <button id="btn1">展開</button>
+    <button id="btn2">摺疊</button>
+    <button id="btn3">雙向</button>
+    <div id="panel" style="display: none; background-color: aliceblue; height: 100px; padding: 10px;">
+        我是展開的面板
+    </div>
+
+    <script>
+        $(function () {
+            $('#btn1').click(function () {
+                $('#panel').slideDown(500);
+            });
+            $('#btn2').click(function () {
+                $('#panel').slideUp(500);
+            });
+            $('#btn3').click(function () {
+                $('#panel').slideToggle(500);
             });
         })
     </script>
 
 
-<script>
-    $(function(){
-        $('#hide').click(function(){
-            $('#p1').hide();
-        $('#show').click(function(){
-            $('#p1').show();
+    <!-- 最新消息列展開與摺疊 -->
+    <div class="box1">
+        <button id="btn5">News1</button>
+        <div id="pane3" style="display: none; background-color: aliceblue; height: 100px; padding: 10px;">
+            我是展開的面板1
+        </div>
+    </div>
+    <div class="box1">
+        <button id="btn4">News2</button>
+        <div id="pane2" style="display: none; background-color: aliceblue; height: 100px; padding: 10px;">
+            我是展開的面板2
+        </div>
+    </div>
+    <style>
+        .box1 button {
+            border: none;
+            padding: 5px 20px;
+            width: 100%;
+            cursor: pointer;
+            background-color: #333;
+            color: #fff;
+            margin-top: 1px;
+        }
+    </style>
+    <script>
+        $(function () {
+            $('#btn5').click(function () {
+                $('#pane3').slideToggle(300);
+            });
+            $('#btn4').click(function () {
+                $('#pane2').slideToggle(300);
+            });
         })
-        });
-    });
-</script>
+    </script>
+
+    <!-- 動畫 -->
+    <hr>
+    <button id="Up">上</button>
+    <button id="Down">下</button>
+    <button id="left">左</button>
+    <button id="right">右</button>
+    <button id="zoom">放大</button>
+    <button id="zoom2">縮小</button>
+    <button id="zoom3">放大縮小雙向</button>    
+    <button id="changeColor">變色</button>
+
+    <br>
+    <div class="box2">123</div>
+    <style>
+        .box2 {
+            height: 100px;
+            width: 100px;
+            background-color: burlywood;
+            margin: 150px;
+            position: absolute;
+            /* 移動要設定absolute */
+        }
+    </style>
+    <script>
+        $(function () {
+            $('#Up').click(function () {
+                $('.box2').animate({ top: '-100px' });
+            });
+            $('#left').click(function () {
+                $('.box2').animate({ left: '-100px' });
+            });
+            $('#zoom').click(function () {
+                $('.box2').animate({
+                    width: '150px',
+                    height: '150px',
+                    fontSize: '30px',
+                });
+            });
+            $('#zoom2').click(function () {
+                $('.box2').animate({
+                    width: '100px',
+                    height: '100p ',
+                    fontSize: '16px',
+                });
+            });
+            $('#zoom3').click(function () {
+                $('.box2').animate({
+                    width: 'toggle',
+                    height: 'toggle',
+                    fontSize: 'toggle',
+                },1000);
+            });
+            
+            $('#changeColor').click(function(){
+                $('.box2').css({
+                    'background-color':'yellow',
+                    'color':'red',
+                    'transform':'scale(1.2)', //放大
+                    'transition': 'all 1s', //動畫
+
+            })
+            
+                });
+
+        })
+    </script>
+
+
 </body>
 
 </html>
