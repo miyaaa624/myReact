@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -85,4 +86,93 @@
 
 </body>
 
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 500px;
+            height: 400px;
+        }
+        .box{
+            width: 500px;
+            height: 400px;
+            position: relative;
+        }
+        #nav{
+             position: absolute;
+             right: 20px;
+             bottom: 12px;
+             z-index: 999;
+        }
+        #nav a{
+            color: #fff;
+            text-decoration: none;
+            font-size: 20px;
+            margin-left: 20px;
+            border: 1px solid #fff;
+            width: 25px;
+            height: 25px;
+            display: inline-block;
+            text-align: center;
+            border-radius: 50%;
+        }
+        #nav a.activeSlide{
+            background-color: gold;
+        }
+        /* 遮色區 */
+    .mask{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 998;
+        height: 50px;
+        background-color: rgba(0, 0, 0, 0.644);
+        width: 100%;
+    }
+
+    </style>
+</head>
+
+<body>
+    <div class="box">
+    <div id="imgCycle">
+        <img src="./images/01.jpg" alt="">
+        <img src="./images/02.jpg" alt="">
+        <img src="./images/03.jpg" alt="">
+        <img src="./images/04.jpg" alt="">
+        <img src="./images/05.jpg" alt="">
+    </div>
+    <div class="mask"></div>
+</div>
+
+    <!-- <div id="nav">輪播導覽</div> -->
+
+    <!-- 1載入主程式 -->
+    <script src="./js/jquery-1.11.3.min.js"></script>
+
+    <!-- 2載入輪播主程式 -->
+    <script src="./js/jquery.cycle.all.js"></script>
+
+    <!-- 3撰寫自己的jQuery -->
+    <script>
+        $(function () {
+            //預設為淡入淡出
+            $('#imgCycle').after('<div id="nav"></div>').cycle({
+                fx: 'fade', //輪播方式
+                sync: false, //有無前一張的殘影
+                timeout: 2000, //輪播速度
+                pager: '#nav' //生成輪播的超連結    
+            });
+        })
+    </script>
+
+</body>
+
+>>>>>>> b29b85e40df03a687b769c02a75150d297e65010
 </html>
