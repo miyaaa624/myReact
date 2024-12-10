@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>圖片縮放輪播</title>
+    <style>
+        img {
+            width: 500px;
+            height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="imgCycle">
+        <img src="./images/01.jpg" alt="">
+        <img src="./images/02.jpg" alt="">
+        <img src="./images/03.jpg" alt="">
+        <img src="./images/04.jpg" alt="">
+        <img src="./images/05.jpg" alt="">
+    </div>
+
+    <!-- 1載入主程式 -->
+    <script src="./js/jquery-1.11.3.min.js"></script>
+
+    <!-- 2載入輪播主程式 -->
+    <script src="./js/jquery.cycle.all.js"></script>
+
+    <!-- 3撰寫自己的jQuery -->
+    <script>
+        $(function () {
+            //預設為淡入淡出
+            $('#imgCycle').cycle({
+                fx: 'zoom', //輪播方式
+                sync: false, //有無前一張的殘影
+                delay: -2000, //第一次與第一張圖停留時間
+                timeout:500, //輪播速度
+            });
+        })
+    </script>
+
+</body>
+
+</html>
