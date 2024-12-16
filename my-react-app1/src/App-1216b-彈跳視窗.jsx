@@ -15,40 +15,21 @@ export default function App() {
     //新增html元素 => append()
     //取得子元素 => children()
 
-    //過時寫法
-  //   $('a:has(.ttpShow)').mouseover(function(e){
-  //     $('body').append('<div id="ttpPanel">'+$(this).children('.ttpShow').html()+'</div>')
-  //     $('#ttpPanel').css({
-  //       top:(e.pageY+10)+'px',
-  //       left:(e.pageX+10)+'px',
-  //     }).fadeIn('fast');
-  //   }).mouseout(function(e){
-  //     $('#ttpPanel').remove();
-  //   }).mousemove(function(e){
-  //     $('#ttpPanel').css({
-  //       top:(e.pageY+10)+'px',
-  //       left:(e.pageX+10)+'px',
-  //     })
-  //   })
-  // }, [])
- 
-  
-    //現今寫法 .on
-  $('a:has(.ttpShow)').on('mousrover',function(e){
-    $('body').append('<div id="ttpPanel">'+$(this).children('.ttpShow').html()+'</div>')
-    $('#ttpPanel').css({
-      top:(e.pageY+10)+'px',
-      left:(e.pageX+10)+'px',
-    }).fadeIn('fast');
-  }).on('mouseout',function(e){
-    $('#ttpPanel').remove();
-  }).on('mousemove',function(e){
-    $('#ttpPanel').css({
-      top:(e.pageY+10)+'px',
-      left:(e.pageX+10)+'px',
+    $('a:has(.ttpShow)').mouseover(function(e){
+      $('body').append('<div id="ttpPanel">'+$(this).children('.ttpShow').html()+'</div>')
+      $('#ttpPanel').css({
+        top:(e.pageY+10)+'px',
+        left:(e.pageX+10)+'px',
+      }).fadeIn('fast');
+    }).mouseout(function(e){
+      $('#ttpPanel').remove();
+    }).mousemove(function(e){
+      $('#ttpPanel').css({
+        top:(e.pageY+10)+'px',
+        left:(e.pageX+10)+'px',
+      })
     })
-  })
-}, [])
+  }, [])
 
   return (
     <>
