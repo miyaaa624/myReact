@@ -1,8 +1,8 @@
 import { Route, Routes } from "react-router-dom";
-import Navbar from "./component/Navbar";
-import Home from "./pages/Home";
+import Navbar from "../component/Navbar";
+import Home from "../pages/Home";
 import News from "./pages/News.JSX";
-import About from "./pages/About";
+import About from "../pages/About";
 
 export default function App() {
   return (

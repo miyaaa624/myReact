@@ -1,5 +1,5 @@
 import './App.css';
-import ShowContnet from './ShowContnet.jsx'
+import ShowContnet from '../ShowContnet.jsx'
 
 
 // 建立元件步驟 ====>  建立區域資料 => function()建立元件 => retrun元件

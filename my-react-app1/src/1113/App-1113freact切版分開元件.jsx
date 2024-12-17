@@ -1,6 +1,6 @@
 import './App.css';
-import ShowContnet from './ShowContnet.jsx'
-import ShowCourse from './ShowCourse.jsx'
+import ShowContnet from '../ShowContnet.jsx'
+import ShowCourse from '../ShowCourse.jsx'
 
 
 //另外建元件檔案 ShowContnet , ShowCourse
