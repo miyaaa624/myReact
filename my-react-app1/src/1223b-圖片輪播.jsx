@@ -4,10 +4,10 @@ export default function () {
   const [CurrentImgIndex, setCurrentImgIndex] = useState(0)
   // 建立圖片陣列
   const slides = [
-    { url: "./images/01.jpg" ,title:"photo1"},
-    { url: "./images/02.jpg" ,title:"photo2"},
-    { url: "./images/03.jpg" ,title:"photo3"},
-    { url: "./images/04.jpg" ,title:"photo4"},
+    { url: "./images/01.jpg" },
+    { url: "./images/02.jpg" },
+    { url: "./images/03.jpg" },
+    { url: "./images/04.jpg" },
   ]
 
   // 當CurrentImgIndex改變時，會觸發useEffect
@@ -45,8 +45,6 @@ export default function () {
           backgroundSize: "cover",
           margin: "auto",
         }}>
-
-          <h2 style={{ color:"red" }}>{slides[CurrentImgIndex].title}</h2>
         </div>
       </div>
     </>
