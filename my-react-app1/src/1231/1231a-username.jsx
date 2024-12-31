@@ -1,5 +1,7 @@
-
 import { createContext, useContext, useState } from "react"
+
+// --------------- 登入葉面 ----------------
+// --------------- 跨元件使用變數 ----------------
 
 //字首大寫是元件 小寫是function
 // step1 所有元件需要使用 => 建立共用區 UserContext (可以自己取名)

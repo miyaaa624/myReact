@@ -12,6 +12,12 @@ export default function Navbar() {
                 <li>
                 <Link to='/news'>最新消息</Link>
                 </li>
+                <li>
+                <Link to='/login'>登入</Link>
+                </li>
+                <li>
+                <Link to='/user'>登入者資料</Link>
+                </li>
             </ul>
         </div>
     )
